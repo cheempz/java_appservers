@@ -10,4 +10,5 @@ ADD https://www.apache.org/dyn/closer.cgi?action=download&filename=tomcat/tomcat
 
 RUN tar -xzf tomcat.tar.gz --strip-components=1 && rm tomcat.tar.gz*
 
+EXPOSE 8080
 CMD ["catalina.sh", "run"]
