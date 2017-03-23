@@ -9,6 +9,7 @@ WORKDIR $CATALINA_HOME
 ADD https://www.apache.org/dyn/closer.cgi?action=download&filename=tomcat/tomcat-7/v${tomcat_version}/bin/apache-tomcat-${tomcat_version}.tar.gz tomcat.tar.gz
 
 RUN tar -xzf tomcat.tar.gz --strip-components=1 && rm tomcat.tar.gz*
+RUN touch foo
 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
